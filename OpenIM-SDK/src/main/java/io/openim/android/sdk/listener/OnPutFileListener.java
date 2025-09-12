@@ -1,14 +1,14 @@
 package io.openim.android.sdk.listener;
 
 
-public interface OnPutFileListener    {
+public interface OnPutFileListener {
     /**
-     *  上传完成 - onSuccess
-     * @param size
-     * @param url
-     * @param type
+     * Upload completed - onSuccess
+     * @param size file size
+     * @param url uploaded URL
+     * @param type file type
      */
-    default void  complete(long size, String url, long type){}
+    default void complete(long size, String url, long type){}
 
     default void  hashPartComplete(String var1, String var2){}
 
@@ -19,9 +19,9 @@ public interface OnPutFileListener    {
     default void  partSize(long var1, long var3){}
 
     /**
-     *  上传进度
+     * Upload progress
      */
-    default void  uploadComplete(long size, long progress, long l2){}
+    default void uploadComplete(long size, long progress, long l2){}
 
     default void  uploadID(String var1){}
 

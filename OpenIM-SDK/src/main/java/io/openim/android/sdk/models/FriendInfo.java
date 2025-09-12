@@ -3,56 +3,32 @@ package io.openim.android.sdk.models;
 import java.util.Objects;
 
 /**
- * 好友信息
+ * Detailed friend information.
  */
 public class FriendInfo {
-    /**
-     * 好友id
-     */
+    /** Friend user ID */
     private String userID;
-    /**
-     * 好友昵称
-     */
+    /** Friend nickname */
     private String nickname;
-    /**
-     * 好友头像
-     */
+    /** Avatar URL */
     private String faceURL;
-    /**
-     * 性别
-     */
+    /** Gender */
     private int gender;
-    /**
-     * 手机号
-     */
+    /** Phone number */
     private String phoneNumber;
-    /**
-     * 出生日期
-     */
+    /** Birthday timestamp */
     private long birth;
-    /**
-     * 邮箱
-     */
+    /** Email */
     private String email;
-    /**
-     * 好友备注名
-     */
+    /** Remark set by the user */
     private String remark;
-    /**
-     * 扩展字段
-     */
+    /** Extension field */
     private String ex;
-    /**
-     * 创建时间
-     */
+    /** Creation time */
     private long createTime;
-    /**
-     * 添加方式
-     */
+    /** Source of the friend addition */
     private int addSource;
-    /**
-     * 操作者id
-     */
+    /** Operator user ID */
     private String operatorUserID;
 
     public String getUserID() {

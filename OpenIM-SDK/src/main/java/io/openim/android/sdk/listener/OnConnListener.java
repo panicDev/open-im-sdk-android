@@ -3,42 +3,37 @@ package io.openim.android.sdk.listener;
 import io.openim.android.sdk.models.UserInfo;
 
 /**
- * 只有在调用sdk的login方法后才开始回调
+ * Connection callbacks occur only after calling the SDK login method
  */
 public interface OnConnListener {
 
     /**
-     * 连接服务器失败
-     * 可以提示用户当前网络连接不可用
+     * Failed to connect to server; notify user the network is unavailable
      */
     default void onConnectFailed(int code, String error){}
 
     /**
-     * 已经成功连接到服务器
+     * Successfully connected to the server
      */
     default void onConnectSuccess(){}
 
     /**
-     * 正在连接到服务器
-     * 适合在 UI 上展示“正在连接”状态。
+     * Connecting to the server; suitable for showing a "connecting" state in the UI
      */
     default void onConnecting(){}
 
     /**
-     * 当前用户被踢下线
-     * 此时可以 UI 提示用户“您已经在其他端登录了当前账号，是否重新登录？”
+     * Current user kicked offline; inform user the account is logged in elsewhere
      */
     default void onKickedOffline(){}
 
     /**
-     * 登录票据已经过期
-     * 请使用新签发的 UserSig 进行登录。
+     * Login token expired; use a newly issued UserSig to log in
      */
     default void onUserTokenExpired(){}
 
     /**
-     * 登录票据无效
-     * 请使用新签发的 UserSig 进行登录。
+     * Login token invalid; use a newly issued UserSig to log in
      */
     default void onUserTokenInvalid(String s){}
 }

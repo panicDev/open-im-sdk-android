@@ -2,11 +2,11 @@ package io.openim.android.sdk.models;
 
 public class NotificationElem {
     /**
-     * 通知内容详情
+     * Detailed notification content
      */
     private String detail;
     /**
-     * 默认提示内容
+     * Default notification text
      */
     private String defaultTips;
 
