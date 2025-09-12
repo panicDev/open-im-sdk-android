@@ -2,3 +2,7 @@
 .idea/
 local.properties
 .DS_Store
+
+# Ignore build outputs
+build/
+**/build/
