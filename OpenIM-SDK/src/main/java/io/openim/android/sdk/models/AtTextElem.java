@@ -4,23 +4,23 @@ import java.util.List;
 
 public class AtTextElem {
     /**
-     * at 消息内容
+     * Text content that includes @ mentions
      */
     private String text;
     /**
-     * 被@的用户id集合
+     * List of mentioned user IDs
      */
     private List<String> atUserList;
     /**
-     * 被@的用户信息
+     * Details of mentioned users
      */
     public List<AtUserInfo> atUsersInfo;
     /**
-     * 自己是否被@了
+     * Whether the current user was mentioned
      */
     private boolean isAtSelf;
     /**
-     * 引用消息
+     * Quoted message
      */
     private Message quoteMessage;
 

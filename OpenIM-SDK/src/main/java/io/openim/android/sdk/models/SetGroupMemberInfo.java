@@ -2,27 +2,27 @@ package io.openim.android.sdk.models;
 
 public class SetGroupMemberInfo {
     /**
-     * 群ID
+     * Group ID
      */
     private String groupID;
     /**
-     * 群成员 ID
+     * Member ID
      */
     private String userID;
     /**
-     * 群成员昵称
+     * Member nickname
      */
     private String nickname;
     /**
-     * 群成员头像
+     * Member avatar URL
      */
     private String faceURL;
     /**
-     * 群成员角色，1 普通成员；2 群主；3 管理员
+     * Member role: 1 member, 2 owner, 3 admin
      */
     private Integer roleLevel;
     /**
-     * 扩展参数
+     * Extra field
      */
     private String ex;
 

@@ -2,11 +2,11 @@ package io.openim.android.sdk.models;
 
 public class QuoteElem {
     /**
-     * 回复内容
+     * Reply text
      */
     private String text;
     /**
-     * 被回复的消息
+     * Referenced message
      */
     private Message quoteMessage;
 

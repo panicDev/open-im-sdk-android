@@ -4,72 +4,72 @@ import java.util.Objects;
 
 public class GroupInfo {
     /**
-     * 组ID
+     * Group ID
      */
     private String groupID;
     /**
-     * 群名
+     * Group name
      */
     private String groupName;
     /**
-     * 群公告
+     * Group announcement
      */
     private String notification;
     /**
-     * 群简介
+     * Group introduction
      */
     private String introduction;
     /**
-     * 群头像
+     * Group avatar URL
      */
     private String faceURL;
     /**
-     * 群主id
+     * Group owner user ID
      */
     private String ownerUserID;
     /**
-     * 创建时间
+     * Creation time
      */
     private Long createTime;
     /**
-     * 群成员数量
+     * Number of group members
      */
     private Integer memberCount;
     /**
-     * 群状态： ok = 0 blocked = 1 Dismissed = 2 Muted  = 3
+     * Group status: ok = 0, blocked = 1, dismissed = 2, muted = 3
      */
     private Integer status;
     /**
-     * 创建者id
+     * Creator user ID
      */
     private String creatorUserID;
     /**
-     * 群类型
+     * Group type
      */
     private Integer groupType;
     /**
-     * 扩展字段
+     * Extension field
      */
     private String ex;
     /**
-     * 进群验证方式 {@link io.openim.android.sdk.enums.GroupVerification}
+     * Join verification mode {@link io.openim.android.sdk.enums.GroupVerification}
      */
     private Integer needVerification;
 
     /**
-     * 不允许通过群获取成员资料 0：关闭，1：打开
+     * Disallow retrieving member info via group: 0 off, 1 on
      */
     private Integer lookMemberInfo;
     /**
-     * 不允许通过群添加好友 0：关闭，1：打开
+     * Disallow adding friends via group: 0 off, 1 on
      */
     private Integer applyMemberFriend;
     /**
-     * 通知更新时间
+     * Announcement update time
      */
     private Long notificationUpdateTime;
     /**
-     * 通知更新人
+     * User who updated the announcement
      */
     private String notificationUserID;
 

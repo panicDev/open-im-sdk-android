@@ -1,39 +1,39 @@
 package io.openim.android.sdk.models;
 
 /**
- * 黑名单详细
+ * Blacklist details
  */
 public class BlacklistInfo {
     /**
-     * 用户id
+     * User ID
      */
     private String userID;
     /**
-     * 昵称
+     * Nickname
      */
     private String nickname;
     /**
-     * 头像
+     * Avatar URL
      */
     private String faceURL;
     /**
-     * 性别
+     * Gender
      */
     private int gender;
     /**
-     * 创建时间
+     * Creation time
      */
     private long createTime;
     /**
-     * 添加方式
+     * Add source
      */
     private int addSource;
     /**
-     * 操作者
+     * Operator
      */
     private String operatorUserID;
     /**
-     * 附加信息
+     * Extra info
      */
     private String ex;
 

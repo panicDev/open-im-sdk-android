@@ -4,72 +4,72 @@ import java.util.Objects;
 
 public class UserInfo {
     /**
-     * 用户id
+     * User ID
      */
     private String userID;
     /**
-     * 用户名
+     * User name
      */
     private String nickname;
     /**
-     * 用户头像
+     * Avatar URL
      */
     private String faceURL;
     /**
-     * 性别：1男，2女
+     * Gender: 1 male, 2 female
      */
     private Integer gender;
     /**
-     * 手机号
+     * Phone number
      */
     private String phoneNumber;
     /**
-     * 生日
+     * Birthday
      */
     private Long birth;
     /**
-     * 邮箱
+     * Email
      */
     private String email;
     /**
-     * 扩展字段
+     * Extra field
      */
     private String ex;
     /**
-     * 备注
+     * Remark
      */
     private String remark;
     /**
-     * 公开的信息
+     * Public info
      */
     private PublicUserInfo publicInfo;
     /**
-     * 仅好友可见的信息
+     * Friend-only info
      */
     private FriendInfo friendInfo;
     /**
-     * 黑名单信息
+     * Blacklist info
      */
     private BlacklistInfo blackInfo;
 
     /**
-     * 全局免打扰
+     * Global do-not-disturb
      */
     private Integer globalRecvMsgOpt;
 
-    // 是允许添加为好友  1：允许，2：否
+    // Whether allowed to add as friend: 1 yes, 2 no
     private Integer allowAddFriend;
 
-    // 新消息铃声   1：允许，2：否
+    // New message beep: 1 on, 2 off
     private Integer allowBeep;
 
-    // 新消息震动   1：允许，2：否
+    // New message vibration: 1 on, 2 off
     private Integer allowVibration;
 
-    // 禁止登录
+    // Login forbidden
     private Integer forbidden;
 
-    // 创建日期
+    // Creation time
     private Long createTime;
 
     public String getUserID() {
@@ -226,14 +226,14 @@ public class UserInfo {
     }
 
     /**
-     * true：黑名单
+     * true if in blacklist
      */
     public boolean isBlacklist() {
         return null != blackInfo;
     }
 
     /**
-     * true：是好友
+     * true if friend
      */
     public boolean isFriendship() {
         return null != friendInfo;

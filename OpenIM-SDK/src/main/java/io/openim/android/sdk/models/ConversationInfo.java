@@ -4,92 +4,92 @@ import java.util.Objects;
 
 public class ConversationInfo {
     /**
-     * 会话id
+     * Conversation ID
      */
     private String conversationID;
     /**
-     * 会话类型 1:单聊 2:群聊
+     * Conversation type: 1 one-on-one, 2 group
      */
     private int conversationType;
     /**
-     * 会话对象用户ID
+     * Peer user ID
      */
     private String userID;
     /**
-     * 会话群聊ID
+     * Peer group ID
      */
     private String groupID;
     /**
-     * 会话对象(用户或群聊)名称
+     * Display name of peer (user or group)
      */
     private String showName;
     /**
-     * 用户头像或群聊头像
+     * Avatar URL
      */
     private String faceURL;
     /**
-     * 接收消息选项：<br/>
-     * 0:在线正常接收消息，离线时进行推送 <br/>
-     * 1:不会接收到消息<br/>
-     * 2:在线正常接收消息，离线不会有推送
+     * Message receiving option:<br/>
+     * 0: receive and push offline<br/>
+     * 1: do not receive<br/>
+     * 2: receive without offline push
      */
     private int recvMsgOpt;
     /**
-     * 未读消息数量
+     * Unread message count
      */
     private int unreadCount;
     /**
-     * 强提示 如at消息，公告 {@link io.openim.android.sdk.enums.GroupAtType}
+     * Mention flag such as @ messages or announcements {@link io.openim.android.sdk.enums.GroupAtType}
      */
     private int groupAtType;
     /**
-     * 最后一条消息 消息对象json字符串
+     * Last message as JSON string
      */
     private String latestMsg;
     /**
-     * 最后一条消息发送时间(ms)
+     * Timestamp of last message (ms)
      */
     private long latestMsgSendTime;
     /**
-     * 会话草稿
+     * Draft text
      */
     private String draftText;
     /**
-     * 会话草稿设置时间
+     * Draft timestamp
      */
     private long draftTextTime;
     /**
-     * 是否置顶，1置顶
+     * Pinned to top
      */
     private boolean isPinned;
     /**
-     * 是否开启私聊
+     * Whether private chat is enabled
      */
     private boolean isPrivateChat;
     /**
-     * 扩展预留字段
+     * Reserved field
      */
     private String ext;
     /**
-     * 扩展预留字段
+     * Reserved field
      */
     private String ex;
     /**
-     * 是否还在群里
+     * Whether still in group
      */
     private boolean isNotInGroup;
 
     /**
-     * 阅读时长 s，即超过了burnDuration秒触发销毁
+     * Read duration in seconds; message deleted after burnDuration seconds
      */
     private int burnDuration;
 
     /**
-     *  定期删除时间
+     * Scheduled delete time
      */
     private long msgDestructTime;
     /**
-     *  开启定期删除时间
+     * Whether scheduled deletion is enabled
      */
     private boolean isMsgDestruct;
 

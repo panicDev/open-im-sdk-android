@@ -6,11 +6,11 @@ import java.util.List;
 public class GroupHasReadInfo implements Serializable {
 
     /**
-     * 已读数
+     * Read count
      */
     private int hasReadCount;
     /**
-     * 未读数
+     * Unread count
      */
     private int unreadCount;
 

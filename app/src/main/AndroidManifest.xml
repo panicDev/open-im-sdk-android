@@ -20,28 +20,28 @@
     <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
     <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
     <uses-permission android:name="android.permission.INTERNET" />
-    <!-- 粗略定位权限，允许一个程序通过网络获取粗略的位置 -->
+    <!-- Coarse location permission to obtain approximate location via network -->
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-    <!-- 精确定位权限，允许一个程序访问精确位置(GPS定位) -->
+    <!-- Fine location permission for GPS-level accuracy -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
-    <!--访问网络-->
+    <!-- Access the network -->
     <uses-permission android:name="android.permission.INTERNET" />
-    <!--粗略定位-->
+    <!-- Coarse location -->
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-    <!--精确定位-->
+    <!-- Precise location -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <!--申请调用A-GPS模块-->
+    <!-- Request A-GPS module -->
     <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
-    <!--用于获取运营商信息，用于支持提供运营商信息相关的接口-->
+    <!-- Obtain carrier information for related APIs -->
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <!--用于访问wifi网络信息，wifi信息会用于进行网络定位-->
+    <!-- Access Wi-Fi network info used for location services -->
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-    <!--用于获取wifi的获取权限，wifi信息会用来进行网络定位-->
+    <!-- Permission to change Wi-Fi state for network-based location -->
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
-    <!--用于读取手机当前的状态-->
+    <!-- Read current phone state -->
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <!--用于写入缓存数据到扩展存储卡-->
+    <!-- Write cached data to external storage -->
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application

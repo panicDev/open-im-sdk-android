@@ -1,14 +1,15 @@
 plugins {
     id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
 }
 
 android {
     namespace 'com.example.pkglib'
-    compileSdkVersion 32
+    compileSdk 34
 
     defaultConfig {
         minSdkVersion 21
-        targetSdkVersion 32
+        targetSdkVersion 34
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
@@ -21,8 +22,11 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    kotlinOptions {
+        jvmTarget = '17'
     }
 }
 
@@ -33,9 +37,9 @@ dependencies {
 def path=project.rootDir.getAbsolutePath()+"/OpenIM-SDK/libs"
 
 
-//把所有依赖的 jar 包拷贝至 build/outputs/aar/libs
+// Copy all dependency JARs to build/outputs/aar/libs
 task syncAllJars() {
-    // 将指定路径下的所有 jar 包，打包至被打包的路径下
+    // Package all JARs from the specified path into the target directory
     def dir = new File(path)
     if (dir.canExecute()){
         files(dir.listFiles()).each { file ->
@@ -71,7 +75,7 @@ task syncAllAars(dependsOn: ':OpenIM-SDK:assemble') {
 }
 
 task makeJar(type: Jar) {
-    archiveName = 'classes.jar'
+    archiveFileName.set('classes.jar')
     def dir = new File(buildDir.getPath() + "/outputs/aar/libs")
     if (dir.canExecute()){
         files(dir.listFiles()).each { file ->
@@ -88,13 +92,13 @@ task makeJar(type: Jar) {
 task fataar(dependsOn: [syncAllAars, syncAllJars, makeJar]) {
 }
 
-//生成最终 aar 包，libs 目录需要被排除
+// Generate the final AAR, excluding the libs directory
 task genAar(dependsOn: [fataar], type: Zip) {
     def destDir = buildDir.getPath() + "/outputs/aar"
-    baseName "open_im_android-sdk"
-    extension "aar"
-    version 'v3.0.1'
-    destinationDirectory = file('libs/')
+    archiveBaseName.set("open_im_android-sdk")
+    archiveExtension.set("aar")
+    archiveVersion.set("v3.0.1")
+    destinationDirectory.set(file('libs/'))
     from destDir
     exclude "libs"
 }

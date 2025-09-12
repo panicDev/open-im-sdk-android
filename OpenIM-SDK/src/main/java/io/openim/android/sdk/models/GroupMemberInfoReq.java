@@ -2,27 +2,27 @@ package io.openim.android.sdk.models;
 
 public class GroupMemberInfoReq {
     /**
-     * 群Id
+     * Group ID
      */
     private String groupID;
     /**
-     * 用户Id
+     * User ID
      */
     private String userID;
     /**
-     * 用户名
+     * Nickname
      */
     private String nickname;
     /**
-     * 头像
+     * Avatar URL
      */
     private String faceURL;
     /**
-     * 群角色{@link io.openim.android.sdk.enums.GroupRole}
+     * Group role {@link io.openim.android.sdk.enums.GroupRole}
      */
     private Integer roleLevel;
     /**
-     * 扩展字段
+     * Extra field
      */
     private String ex;
 

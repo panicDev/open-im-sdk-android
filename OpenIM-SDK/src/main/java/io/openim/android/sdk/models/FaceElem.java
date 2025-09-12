@@ -1,16 +1,16 @@
 package io.openim.android.sdk.models;
 
 /**
- * 表情
+ * Emoji information
  */
 public class FaceElem {
     /**
-     * app内嵌表情包，根据index 匹配显示表情图
-     * */
+     * Built-in emoji set; use index to select the image
+     */
     private int index;
     /**
-     * 其他表情，如url表情，直接加载url即可
-     * */
+     * Other emojis, such as by URL; load directly from the URL
+     */
     private String data;
 
     public int getIndex() {

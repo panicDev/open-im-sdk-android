@@ -2,23 +2,23 @@ package io.openim.android.sdk.models;
 
 public class PublicUserInfo {
     /**
-     * 用户id
+     * User ID
      */
     private String userID;
     /**
-     * 昵称
+     * Nickname
      */
     private String nickname;
     /**
-     * 头像
+     * Avatar URL
      */
     private String faceURL;
     /**
-     * 扩展字段
+     * Extra field
      */
     private String ex;
     /**
-     * 创建时间
+     * Creation time
      */
     private Long createTime;
 
