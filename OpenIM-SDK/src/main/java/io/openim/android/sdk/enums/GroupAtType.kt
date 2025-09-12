@@ -1,17 +1,17 @@
 package io.openim.android.sdk.enums
 
 /**
- * 会话强提醒
+ * Group @-mention types
  */
 object GroupAtType {
-    /** 清除所有 */
+    /** No mentions */
     const val AT_NORMAL = 0
-    /** at我 */
+    /** Mention me */
     const val AT_ME = 1
-    /** at所有人 */
+    /** Mention everyone */
     const val AT_ALL = 2
-    /** at所有人，at我 */
+    /** Mention everyone and me */
     const val AT_ALL_AT_ME = 3
-    /** 群公告提示 */
+    /** Group notification */
     const val GROUP_NOTIFICATION = 4
 }

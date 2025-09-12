@@ -1,7 +1,7 @@
 package io.openim.android.sdk.enums
 
 /**
- * 消息类型
+ * Message types
  */
 object MessageType {
     const val TEXT = 101

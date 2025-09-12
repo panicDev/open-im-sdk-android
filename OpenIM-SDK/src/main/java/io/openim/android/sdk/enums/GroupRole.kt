@@ -1,13 +1,13 @@
 package io.openim.android.sdk.enums
 
 /**
- * 组成员角色
+ * Group member roles
  */
 object GroupRole {
-    /** 群主 */
+    /** Owner */
     const val OWNER = 100
-    /** 群管理员 */
+    /** Administrator */
     const val ADMIN = 60
-    /** 群成员 */
+    /** Member */
     const val MEMBER = 20
 }

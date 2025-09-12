@@ -1,15 +1,15 @@
 package io.openim.android.sdk.enums
 
 /**
- * 消息发送状态
+ * Message send status
  */
 object MessageStatus {
-    /** 发送中 */
+    /** Sending */
     const val SENDING = 1
-    /** 发送成功 */
+    /** Sent successfully */
     const val SUCCEEDED = 2
-    /** 发送失败 */
+    /** Send failed */
     const val FAILED = 3
-    /** 发送取消 */
+    /** Send canceled */
     const val DELETED = 4
 }

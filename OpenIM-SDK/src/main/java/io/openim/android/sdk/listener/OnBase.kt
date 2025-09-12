@@ -1,16 +1,16 @@
 package io.openim.android.sdk.listener
 
 /**
- * api接口回调
+ * API callback interface
  */
 interface OnBase<T> {
     /**
-     * 失败
+     * Called when the operation fails
      */
     fun onError(code: Int, error: String) {}
 
     /**
-     * 成功
+     * Called when the operation succeeds
      */
     fun onSuccess(data: T) {}
 }

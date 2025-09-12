@@ -1,7 +1,7 @@
 package io.openim.android.sdk.enums
 
 /**
- * 平台
+ * Platforms
  */
 object Platform {
     const val IOS = 1

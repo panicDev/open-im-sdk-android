@@ -5,7 +5,7 @@ import io.openim.android.sdk.models.GroupInfo
 import io.openim.android.sdk.models.GroupMembersInfo
 
 /**
- * 群组监听
+ * Group event listener
  */
 interface OnGroupListener {
     fun onGroupApplicationAccepted(info: GroupApplicationInfo) {}

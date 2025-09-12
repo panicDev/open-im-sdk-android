@@ -7,7 +7,7 @@ import io.openim.android.sdk.models.UserInfo;
 
 
 /**
- * 好友关系监听
+ * Friendship listener
  */
 public interface OnFriendshipListener {
 

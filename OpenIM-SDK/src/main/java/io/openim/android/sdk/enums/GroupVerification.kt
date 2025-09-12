@@ -1,13 +1,13 @@
 package io.openim.android.sdk.enums
 
 /**
- * 进群验证方式
+ * Group entry verification methods
  */
 object GroupVerification {
-    /** 申请需要同意 邀请直接进 */
+    /** Application requires approval; invitations join directly */
     const val APPLY_NEED_VERIFICATION_INVITE_DIRECTLY = 0
-    /** 所有人进群需要验证，除了群主管理员邀 */
+    /** Everyone needs verification except owner/admin invitations */
     const val ALL_NEED_VERIFICATION = 1
-    /** 直接进群 */
+    /** Join directly */
     const val DIRECTLY = 2
 }
