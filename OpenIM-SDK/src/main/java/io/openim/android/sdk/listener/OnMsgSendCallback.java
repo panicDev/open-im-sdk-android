@@ -4,21 +4,21 @@ package io.openim.android.sdk.listener;
 import io.openim.android.sdk.models.Message;
 
 /**
- * 消息发送监听
+ * Message send listener
  */
 public interface OnMsgSendCallback extends OnBase<Message> {
     /**
-     * 发送失败
+     * Send failed
      */
-  default   void onError(int code, String error){}
+    default void onError(int code, String error){}
 
     /**
-     * 上传进度
+     * Upload progress
      */
-    default  void onProgress(long progress){}
+    default void onProgress(long progress){}
 
     /**
-     * 发送成功
+     * Send succeeded
      */
     default void onSuccess(Message s){}
 }

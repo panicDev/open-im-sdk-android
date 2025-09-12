@@ -14,8 +14,8 @@ final public class _ConversationListener implements open_im_sdk_callback.OnConve
     }
 
     /**
-     * 返回当前发生改变的会话列表
-     **/
+     * Return list of conversations that changed
+     */
     @Override
     public void onConversationChanged(String s) {
         if (null != listener) {
@@ -32,8 +32,8 @@ final public class _ConversationListener implements open_im_sdk_callback.OnConve
     }
 
     /**
-     * 返回当前新增的会话列表
-     **/
+     * Return list of newly added conversations
+     */
     @Override
     public void onNewConversation(String s) {
         if (null != listener) {

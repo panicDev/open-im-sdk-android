@@ -85,7 +85,7 @@ package io.openim.android.sdk;
             "Your IM server socket address", getStorageDir()); //Storage path
         initConfig.isLogStandardOutput = true;
 
-        ///IM 初始化
+        // Initialize the IM SDK
         OpenIMClient.getInstance().initSDK('Your Application',
             initConfig, IMEvent.getInstance().connListener);
 ```
@@ -169,7 +169,7 @@ You can find a demo Android app that uses the SDK in the [open-im-android-demo](
 - 📚 [OpenIM Community](https://github.com/OpenIMSDK/community)
 - 💕 [OpenIM Interest Group](https://github.com/Openim-sigs)
 - 🚀 [Join our Slack community](https://join.slack.com/t/openimsdk/shared_invite/zt-22720d66b-o_FvKxMTGXtcnnnHiMqe9Q)
-- :eyes: [Join our wechat (微信群)](https://openim-1253691595.cos.ap-nanjing.myqcloud.com/WechatIMG20.jpeg)
+- :eyes: [Join our WeChat group](https://openim-1253691595.cos.ap-nanjing.myqcloud.com/WechatIMG20.jpeg)
 
 ## Community Meetings :calendar:
 

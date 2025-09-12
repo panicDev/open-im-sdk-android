@@ -16,7 +16,7 @@ public class JsonUtil {
     private static final Gson gson = new Gson();
 
     /**
-     * 将object对象转成json字符串
+     * Convert an object to a JSON string
      */
     public static String toString(Object object) {
         String gsonString = "";
@@ -31,7 +31,7 @@ public class JsonUtil {
     }
 
     /**
-     * 将object对象转成json字符串
+     * Convert an object to a JSON string without null values
      */
     public static String toStringWithoutNull(Object object) {
         String gsonString = "";
@@ -47,7 +47,7 @@ public class JsonUtil {
 
 
     /**
-     * 将gsonString转成泛型bean
+     * Convert a JSON string to a generic bean
      */
     public static <T> T toObj(String gsonString, Class<T> cls) {
         T t = null;
@@ -63,11 +63,11 @@ public class JsonUtil {
 
 
     /**
-     * 转成list
-     * 泛型在编译期类型被擦除导致报错
-     * @param gsonString
-     * @param cls
-     * @return
+     * Convert to list
+     * Generic type erasure at compile time causes errors
+     * @param gsonString JSON string
+     * @param cls Class type
+     * @return List of type T
      */
 //    public static <T> List<T> GsonToList(String gsonString, Class<T> cls) {
 //        List<T> list = null;
@@ -79,8 +79,7 @@ public class JsonUtil {
 //    }
 
     /**
-     * 转成list
-     * 解决泛型在编译期类型被擦除导致报错
+     * Convert to list and resolve generic type erasure issue
      */
     public static <T> List<T> toArray(String json, Class<T> cls) {
         List<T> list = null;
@@ -100,7 +99,7 @@ public class JsonUtil {
 
 
     /**
-     * 转成list中有map的
+     * Convert to a list containing maps
      */
     public static <T> List<Map<String, T>> toListMaps(String gsonString) {
         List<Map<String, T>> list = null;
@@ -114,7 +113,7 @@ public class JsonUtil {
 
 
     /**
-     * 转成map的
+     * Convert to a map
      */
     public static <T> Map<String, T> toMaps(String gsonString) {
         Map<String, T> map = null;

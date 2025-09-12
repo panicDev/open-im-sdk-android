@@ -2,21 +2,21 @@ package io.openim.android.sdk.listener;
 
 
 /**
- * 消息发送监听
+ * File upload progress listener
  */
 public interface OnFileUploadProgressListener extends OnBase<String> {
     /**
-     * 上传失败
+     * Upload failed
      */
     default void onError(int code, String error){}
 
     /**
-     * 上传进度
+     * Upload progress
      */
     default void onProgress(long progress){}
 
     /**
-     * 上传成功
+     * Upload succeeded
      */
     default void onSuccess(String s){}
 }
