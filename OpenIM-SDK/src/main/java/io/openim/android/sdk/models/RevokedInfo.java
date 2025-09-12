@@ -3,41 +3,41 @@ package io.openim.android.sdk.models;
 public class RevokedInfo {
 
     /**
-     * 撤回者ID
+     * ID of the user who recalled the message
      */
     private String revokerID;
 
     /**
-     * 撤回者群角色 {@link io.openim.android.sdk.enums.GroupRole}
+     * Recaller's role in group {@link io.openim.android.sdk.enums.GroupRole}
      */
     private int revokerRole;
 
     /**
-     * 撤回者昵称
+     * Recaller nickname
      */
     private String revokerNickname;
     /**
-     * 消息id
+     * Message ID
      */
     private String clientMsgID;
     /**
-     * 撤回时间
+     * Recall time
      */
     private long revokeTime;
     /**
-     * 消息发送时间
+     * Original send time
      */
     private long sourceMessageSendTime;
     /**
-     * 消息发送者
+     * Original sender ID
      */
     private String sourceMessageSendID;
     /**
-     * 消息发送者昵称
+     * Original sender nickname
      */
     private String sourceMessageSenderNickname;
     /**
-     * 会话类型 {@link io.openim.android.sdk.enums.ConversationType}
+     * Conversation type {@link io.openim.android.sdk.enums.ConversationType}
      */
     private int sessionType;
 

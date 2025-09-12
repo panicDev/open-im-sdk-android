@@ -2,23 +2,23 @@ package io.openim.android.sdk.models;
 
 public class SoundElem {
     /**
-     * 唯一ID
+     * Unique ID
      */
     private String uuid;
     /**
-     * 本地资源地址
+     * Local file path
      */
     private String soundPath;
     /**
-     * oss地址
+     * OSS URL
      */
     private String sourceUrl;
     /**
-     * 音频大小
+     * Audio size
      */
     private long dataSize;
     /**
-     * 音频时长 s
+     * Audio duration in seconds
      */
     private long duration;
 

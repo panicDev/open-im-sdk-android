@@ -2,23 +2,23 @@ package io.openim.android.sdk.models;
 
 public class UpdateFriendsReq {
     /**
-     * 操作者Uid
+     * Operator user ID
      */
     private String ownerUserID;
     /**
-     * 待更新的用户id
+     * IDs of friends to update
      */
     private String[] friendUserIDs;
     /**
-     * 是否置顶
+     * Whether pinned to top
      */
     private Boolean isPinned;
     /**
-     * 备注名
+     * Remark/alias
      */
     private String remark;
     /**
-     * 扩展参数
+     * Extra field
      */
     private String ex;
 

@@ -2,46 +2,46 @@ package io.openim.android.sdk.models;
 
 public class ConversationReq {
     /**
-     * 会话id
+     * Conversation ID
      */
     private String conversationID;
     /**
-     * 会话类型 1:单聊 2:群聊
+     * Conversation type: 1 single, 2 group
      */
     private Integer conversationType;
     /**
-     * 会话对象用户ID
+     * Peer user ID
      */
     private String userID;
     /**
-     * 会话群聊ID
+     * Peer group ID
      */
     private String groupID;
     /**
-     * 接收消息选项：<br/>
-     * 0:在线正常接收消息，离线时进行推送 <br/>
-     * 1:不会接收到消息<br/>
-     * 2:在线正常接收消息，离线不会有推送
+     * Message receiving option:<br/>
+     * 0: receive and push offline<br/>
+     * 1: do not receive<br/>
+     * 2: receive without offline push
      */
     private Integer recvMsgOpt;
     /**
-     * 是否置顶，1置顶
+     * Pinned to top
      */
     private Boolean isPinned;
     /**
-     * 是否开启私聊
+     * Private chat enabled
      */
     private Boolean isPrivateChat;
     /**
-     * 扩展预留字段
+     * Reserved field
      */
     private String ex;
     /**
-     * 阅读时长 s，即超过了burnDuration秒触发销毁
+     * Read duration in seconds; delete after burnDuration seconds
      */
     private Integer burnDuration;
     /**
-     * 强提示 如at消息，公告 {@link io.openim.android.sdk.enums.GroupAtType}
+     * Mention flag like @ messages or announcements {@link io.openim.android.sdk.enums.GroupAtType}
      */
     private Integer groupAtType;
 

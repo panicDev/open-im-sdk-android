@@ -3,13 +3,13 @@ package io.openim.android.sdk.models;
 
 public class NotDisturbInfo {
     /**
-     * 会话id
-     * */
+     * Conversation ID
+     */
     private String conversationId;
     /**
-     * 免打扰状态
-     * 1:屏蔽消息; 2:接收消息但不提示; 0:正常
-     * */
+     * Do-not-disturb status
+     * 1 block messages; 2 receive without alert; 0 normal
+     */
     private int result;
 
     public String getConversationId() {

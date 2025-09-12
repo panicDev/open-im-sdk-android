@@ -4,20 +4,20 @@ import java.io.Serializable;
 
 public class AttachedInfoElem implements Serializable {
     /**
-     * 组信息已读详细
+     * Detailed group read info
      */
     private GroupHasReadInfo groupHasReadInfo;
     /**
-     * 是否是私聊消息（阅后即焚消息）
+     * Whether it's a private (self-destruct) message
      */
     private boolean isPrivateChat;
     /**
-     * 消息已读时间
+     * Message read time
      */
     private long hasReadTime;
     /**
-     * 阅读时长 s
-     * 即从hasReadTime时间算起，超过了burnDuration秒触发销毁
+     * Reading duration in seconds
+     * Message is deleted burnDuration seconds after hasReadTime
      */
     private int burnDuration;
 

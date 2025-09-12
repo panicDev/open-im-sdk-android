@@ -2,23 +2,23 @@ package io.openim.android.sdk.models;
 
 public class UserInfoReq {
     /**
-     * 用户id
+     * User ID
      */
     private String userID;
     /**
-     * 用户昵称
+     * User nickname
      */
     private String nickname;
     /**
-     * 用户头像
+     * User avatar URL
      */
     private String faceURL;
     /**
-     * 扩展参数
+     * Extra information
      */
     private String ex;
     /**
-     * 全局免打扰，1:屏蔽消息; 2:接收消息但不提示; 0:正常
+     * Global do-not-disturb: 1 block; 2 receive without alert; 0 normal
      */
     private Integer globalRecvMsgOpt;
 

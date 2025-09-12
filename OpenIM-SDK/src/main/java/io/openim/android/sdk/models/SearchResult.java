@@ -4,7 +4,7 @@ import java.util.List;
 
 public class SearchResult {
     /**
-     * 获取到的总的消息数量
+     * Total number of retrieved messages
      **/
     private int totalCount;
     private List<SearchResultItem> searchResultItems;

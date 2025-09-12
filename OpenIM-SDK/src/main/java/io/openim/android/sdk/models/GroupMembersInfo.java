@@ -2,48 +2,48 @@ package io.openim.android.sdk.models;
 
 public class GroupMembersInfo {
     /**
-     * 群id
+     * Group ID
      */
     private String groupID;
     /**
-     * 用户id
+     * User ID
      */
     private String userID;
     /**
-     * 群内昵称
+     * Nickname in group
      */
     private String nickname;
     /**
-     * 头像
+     * Avatar URL
      */
     private String faceURL;
     /**
-     * 群角色
+     * Group role level
      */
     private int roleLevel;
     /**
-     * 入群时间
+     * Join time
      */
     private long joinTime;
     /**
-     * 加入方式 2：邀请加入 3：搜索加入 4：通过二维码加入
+     * Join source: 2 invited, 3 searched, 4 via QR code
      */
     private int joinSource;
     /**
-     * 操作者id
+     * Operator ID
      */
     private String operatorUserID;
     /**
-     * 扩展字段
+     * Extra field
      */
     private String ex;
     /**
-     * 禁言结束时间
+     * Mute end time
      */
     private long muteEndTime;
 
     /**
-     * 邀请人id
+     * Inviter ID
      */
     private String inviterUserID;
 

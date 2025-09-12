@@ -1,51 +1,51 @@
 package io.openim.android.sdk.models;
 
 /**
- * 部门信息
+ * Department info
  */
 public class DeptInfo {
     /**
-     * 部门id
+     * Department ID
      */
     private String departmentID;
     /**
-     * 头像
+     * Avatar URL
      */
     private String faceURL;
     /**
-     * 名称
+     * Name
      */
     private String name;
     /**
-     * 上一级id
+     * Parent ID
      */
     private String parentID;
     /**
-     * 排序
+     * Order
      */
     private int order;
     /**
-     * 部门类型
+     * Department type
      */
     private int departmentType;
     /**
-     * 创建时间
+     * Creation time
      */
     private long createTime;
     /**
-     * 子部门数量
+     * Number of sub-departments
      */
     private int subDepartmentNum;
     /**
-     * 成员数量
+     * Member count
      */
     private int memberNum;
     /**
-     * 附加字段
+     * Extra field
      */
     private String ex;
     /**
-     * 附加信息
+     * Attached info
      */
     private String attachedInfo;
 

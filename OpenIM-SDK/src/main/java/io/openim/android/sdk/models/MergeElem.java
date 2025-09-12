@@ -4,15 +4,15 @@ import java.util.List;
 
 public class MergeElem {
     /**
-     * 标题
+     * Title
      */
     private String title;
     /**
-     * 摘要
+     * Summaries
      */
     private List<String> abstractList;
     /**
-     * 具体选择合并的消息列表
+     * Messages selected for merging
      */
     private List<Message> multiMessage;
 
