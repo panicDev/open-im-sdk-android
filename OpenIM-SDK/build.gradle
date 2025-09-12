@@ -1,14 +1,16 @@
 plugins {
     id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
     id 'maven-publish'
 }
 
 android {
-    compileSdkVersion 33
+    namespace 'io.openim.android.sdk'
+    compileSdk 34
 
     defaultConfig {
         minSdkVersion 21
-        targetSdkVersion 33
+        targetSdkVersion 34
         versionCode 1
         versionName "1.0"
 
@@ -28,24 +30,14 @@ android {
 //        }
 //    }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_11
-        targetCompatibility JavaVersion.VERSION_11
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    kotlinOptions {
+        jvmTarget = '17'
     }
 
-    afterEvaluate {
-        publishing {
-            publications {
-                // Creates a Maven publication called "release".
-                release(MavenPublication) {
-                    from components.release
-                    //建议和github地址对应，否则对jitpack无效
-                    groupId = 'com.github.openimsdk'
-                    //建议和github仓库名称对应，否则对jitpack无效
-                    artifactId = 'open-im-sdk-android'
-                }
-            }
-        }
-    }
+    // Publishing configuration can be added here if needed
 }
 
 dependencies {
