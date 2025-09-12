@@ -4,46 +4,46 @@ import java.util.List;
 
 public class C2CReadReceiptInfo {
     /**
-     * 用户id
+     * User ID
      */
     private String userID;
     /**
-     * 组id
+     * Group ID
      */
     private String groupID;
     /**
-     * 已读消息id
+     * IDs of messages marked read
      */
     private List<String> msgIDList;
     /**
-     * 阅读时间
+     * Read timestamp
      */
     private long readTime;
     /**
-     * 标识消息是用户级别还是系统级别 100:用户 200:系统
+     * Flag for user-level (100) or system-level (200) message
      */
     private int msgFrom;
     /**
      * {@link io.openim.android.sdk.enums.MessageType}
-     * 消息类型：
-     * 101:文本消息
-     * 102:图片消息
-     * 103:语音消息
-     * 104:视频消息
-     * 105:文件消息
-     * 106:@消息
-     * 107:合并消息
-     * 108:转发消息
-     * 109:位置消息
-     * 110:自定义消息
-     * 111:撤回消息回执
-     * 112:C2C已读回执
-     * 113:正在输入状态
+     * Message type:
+     * 101: text
+     * 102: image
+     * 103: audio
+     * 104: video
+     * 105: file
+     * 106: @ mention
+     * 107: merged
+     * 108: forwarded
+     * 109: location
+     * 110: custom
+     * 111: revoke receipt
+     * 112: C2C read receipt
+     * 113: typing status
      */
     private int contentType;
     /**
      * {@link io.openim.android.sdk.enums.ConversationType}
-     * 会话类型 1:单聊 2:群聊
+     * Session type: 1 single chat, 2 group chat
      */
     private int sessionType;
 

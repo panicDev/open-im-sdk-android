@@ -4,39 +4,39 @@ import java.util.List;
 
 public class SignalingInvitationInfo {
     /**
-     * 邀请者UserID
+     * Inviter user ID
      */
     private String inviterUserID;
     /**
-     * 被邀请者UserID列表，如果是单聊只有一个元素
+     * List of invitee user IDs; only one for single chat
      */
     private List<String> inviteeUserIDList;
     /**
-     * 如果是单聊，为""
+     * Empty string for one-on-one call
      */
     private String groupID;
     /**
-     * 房间ID，必须唯一，可以不设置。
+     * Room ID, must be unique but optional
      */
     private String roomID;
     /**
-     * 邀请超时时间（秒）
+     * Invitation timeout in seconds
      */
     private long timeout;
     /**
-     * 发起时间（秒）
+     * Start time in seconds
      */
     private long initiateTime;
     /**
-     * video 或者audio
+     * "video" or "audio"
      */
     private String mediaType;
     /**
-     * 1为单聊，2为群聊
+     * 1 for single chat, 2 for group chat
      */
     private int sessionType;
     /**
-     * 和之前定义一致
+     * Same as previously defined
      */
     private int platformID;
 

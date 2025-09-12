@@ -2,102 +2,102 @@ package io.openim.android.sdk.models;
 
 public class GroupApplicationInfo {
     /**
-     * 群id
+     * Group ID
      */
     private String groupID;
     /**
-     * 群名
+     * Group name
      */
     private String groupName;
     /**
-     * 群公告
+     * Group notification
      */
     private String notification;
     /**
-     * 群简介
+     * Group introduction
      */
     private String introduction;
     /**
-     * 群头像
+     * Group avatar URL
      */
     private String groupFaceURL;
     /**
-     * 创建时间
+     * Creation time
      */
     private long createTime;
     /**
-     * 状态
+     * Status
      */
     private int status;
     /**
-     * 创建者id
+     * Creator ID
      */
     private String creatorUserID;
     /**
-     * 群类型
+     * Group type
      */
     private int groupType;
     /**
-     * 拥有者id
+     * Owner ID
      */
     private String ownerUserID;
     /**
-     * 成员数量
+     * Member count
      */
     private int memberCount;
     /**
-     * 申请者的id
+     * Applicant ID
      */
     private String userID;
     /**
-     * 申请者的昵称
+     * Applicant nickname
      */
     private String nickname;
     /**
-     * 申请者的头像
+     * Applicant avatar URL
      */
     private String userFaceURL;
     /**
-     * 申请者的性别
+     * Applicant gender
      */
     private int gender;
     /**
      * REFUSE = -1, AGREE = 1
-     * -1：拒绝，1：同意
+     * -1 rejected, 1 approved
      */
     private int handleResult;
     /**
-     * 申请原因
+     * Application reason
      */
     private String reqMsg;
     /**
-     * 处理结果描述
+     * Handle result description
      */
     private String handledMsg;
     /**
-     * 申请时间
+     * Application time
      */
     private long reqTime;
     /**
-     * 处理者的id
+     * Handler ID
      */
     private String handleUserID;
     /**
-     * 处理时间
+     * Handle time
      */
     private long handledTime;
     /**
-     * 扩展字段
+     * Extra field
      */
     private String ex;
 
     /**
-     * 2：通过邀请  3：通过搜索  4：通过二维码
+     * 2 invited, 3 searched, 4 via QR code
      */
     private int joinSource;
 
     /**
-     * 邀请进群用户ID
+     * Inviter ID
      */
     private String inviterUserID;
 

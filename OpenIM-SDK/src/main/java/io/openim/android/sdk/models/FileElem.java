@@ -2,23 +2,23 @@ package io.openim.android.sdk.models;
 
 public class FileElem {
     /**
-     * 文件本地资源地址
+     * Local file path
      */
     private String filePath;
     /**
-     * id
+     * Unique ID
      */
     private String uuid;
     /**
-     * oss地址
+     * OSS URL
      */
     private String sourceUrl;
     /**
-     * 文件名称
+     * File name
      */
     private String fileName;
     /**
-     * 文件大小
+     * File size
      */
     private long fileSize;
 

@@ -1,15 +1,15 @@
 package io.openim.android.sdk.models;
 
 /**
- * at消息 userID跟nickname映射关系
+ * Mapping between user IDs and nicknames in @ messages
  */
 public class AtUserInfo {
     /**
-     * 被at的用户的id
+     * ID of the mentioned user
      */
     private String atUserID;
     /**
-     * 被at的用户的昵称
+     * Nickname of the mentioned user
      */
     private String groupNickname;
 

@@ -5,28 +5,28 @@ import java.util.List;
 public class SearchResultItem {
 
     /**
-     * 会话ID
+     * Conversation ID
      */
     private String conversationID;
 
     /**
-     * 这个会话下的消息数量
+     * Message count in this conversation
      */
     private int messageCount;
 
     /**
-     * 显示名
+     * Display name
      */
     public String showName;
 
     /**
-     * 头像
+     * Avatar URL
      */
     public String faceURL;
 
 
     /**
-     * Message的列表
+     * List of messages
      */
     private List<Message> messageList;
 

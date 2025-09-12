@@ -2,11 +2,11 @@ package io.openim.android.sdk.models;
 
 public class FriendshipInfo {
     /**
-     * 用户id
+     * User ID
      */
     private String userID;
     /**
-     * 1表示好友（并且不是黑名单）
+     * 1 indicates friend and not blacklisted
      */
     private int result;
 

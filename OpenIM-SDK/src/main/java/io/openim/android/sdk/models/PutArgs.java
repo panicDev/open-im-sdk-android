@@ -4,16 +4,16 @@ import io.openim.android.sdk.utils.CommonUtil;
 
 public class PutArgs {
     /**
-     * 本地文件路径
+     * Local file path
      */
     public String filepath;
     /**
-     * 文件名
+     * File name
      */
     public String name;
 
     /**
-     * 类型
+     * Type
      */
     public String cuase;
 

@@ -2,19 +2,19 @@ package io.openim.android.sdk.models;
 
 public class PictureElem {
     /**
-     * 本地资源地址
+     * Local image path
      */
     private String sourcePath;
     /**
-     * 本地图片详情
+     * Local image info
      */
     private PictureInfo sourcePicture;
     /**
-     * 大图详情
+     * Large image info
      */
     private PictureInfo bigPicture;
     /**
-     * 缩略图详情
+     * Thumbnail info
      */
     private PictureInfo snapshotPicture;
 

@@ -2,63 +2,63 @@ package io.openim.android.sdk.models;
 
 public class FriendApplicationInfo {
     /**
-     * 请求用户id
+     * Applicant user ID
      */
     private String fromUserID;
     /**
-     * 请求用户昵称
+     * Applicant nickname
      */
     private String fromNickname;
     /**
-     * 请求用户头像
+     * Applicant avatar URL
      */
     private String fromFaceURL;
     /**
-     * 请求用户性别
+     * Applicant gender
      */
     private int fromGender;
     /**
-     * 接受用户id
+     * Receiver user ID
      */
     private String toUserID;
     /**
-     * 接受用户昵称
+     * Receiver nickname
      */
     private String toNickname;
     /**
-     * 接受用户头像
+     * Receiver avatar URL
      */
     private String toFaceURL;
     /**
-     * 接受用户性别
+     * Receiver gender
      */
     private int toGender;
     /**
-     * 处理结果 0 等待处理，1 已同意， 2 已拒绝
+     * Handle result: 0 pending, 1 accepted, 2 rejected
      */
     private int handleResult;
     /**
-     * 请求备注
+     * Application message
      */
     private String reqMsg;
     /**
-     * 创建时间
+     * Creation time
      */
     private long createTime;
     /**
-     * 处理者id
+     * Handler user ID
      */
     private String handlerUserID;
     /**
-     * 处理备注
+     * Handler message
      */
     private String handleMsg;
     /**
-     * 处理时间
+     * Handle time
      */
     private long handleTime;
     /**
-     * 扩展字段
+     * Extra field
      */
     private String ex;
 

@@ -2,11 +2,11 @@ package io.openim.android.sdk.models;
 
 public class GroupMemberRole {
     /**
-     * 成员id
+     * Member ID
      */
     private String userID;
     /**
-     * 1普通成员, 2群主，3管理员 {@link io.openim.android.sdk.enums.GroupRole}
+     * 1 member, 2 owner, 3 admin {@link io.openim.android.sdk.enums.GroupRole}
      */
     private int roleLevel;
 
