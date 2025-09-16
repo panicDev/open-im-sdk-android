@@ -47,10 +47,10 @@ def path=project.rootDir.getAbsolutePath()+"/OpenIM-SDK/libs"
 
 
 // Copy all dependency JARs to build/outputs/aar/libs
-task syncAllJars() {
+tasks.register('syncAllJars') {
     // Package all JARs from the specified path into the target directory
     def dir = new File(path)
-    if (dir.canExecute()){
+    if (dir.canExecute()) {
         files(dir.listFiles()).each { file ->
             if (file.name.endsWith('.jar')) {
                 copy {
@@ -61,7 +61,8 @@ task syncAllJars() {
         }
     }
 }
-task syncAllAars(dependsOn: ':OpenIM-SDK:assemble') {
+tasks.register('syncAllAars') {
+    dependsOn ':OpenIM-SDK:assemble'
     def jarName
     def aarPath
     def destDir = buildDir.getPath() + "/outputs/aar"
@@ -83,10 +84,10 @@ task syncAllAars(dependsOn: ':OpenIM-SDK:assemble') {
     }
 }
 
-task makeJar(type: Jar) {
+tasks.register('makeJar', Jar) {
     archiveFileName.set('classes.jar')
     def dir = new File(buildDir.getPath() + "/outputs/aar/libs")
-    if (dir.canExecute()){
+    if (dir.canExecute()) {
         files(dir.listFiles()).each { file ->
 
             if (file.name.endsWith('.jar')) {
@@ -98,15 +99,18 @@ task makeJar(type: Jar) {
 
 }
 
-task fataar(dependsOn: [syncAllAars, syncAllJars, makeJar]) {
+tasks.register('fataar') {
+    dependsOn('syncAllAars', 'syncAllJars', 'makeJar')
+//    dependsOn[syncAllAars, syncAllJars, makeJar]
 }
 
 // Generate the final AAR, excluding the libs directory
-task genAar(dependsOn: [fataar], type: Zip) {
+tasks.register('genAar', Zip) {
+    dependsOn('fataar')
     def destDir = buildDir.getPath() + "/outputs/aar"
     archiveBaseName.set("open_im_android-sdk")
     archiveExtension.set("aar")
-    archiveVersion.set("v3.0.1")
+    archiveVersion.set("v3.8.4")
     destinationDirectory.set(file('libs/'))
     from destDir
     exclude "libs"
