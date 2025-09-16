@@ -4,6 +4,12 @@ plugins {
     id 'maven-publish'
 }
 
+ext {
+    PUBLISH_GROUP_ID = 'com.github.panicDev'
+    PUBLISH_VERSION = '3.8.4.2'
+    PUBLISH_ARTIFACT_ID = 'open-im-sdk-android'
+}
+
 android {
     namespace 'io.openim.android.sdk'
     compileSdk 36
@@ -29,6 +35,11 @@ android {
     }
 
     // Publishing configuration can be added here if needed
+    publishing {
+        singleVariant("release") {
+            withSourcesJar()
+        }
+    }
 }
 
 dependencies {
@@ -40,4 +51,18 @@ dependencies {
 
     api(project(":im-core"))
 
+}
+
+publishing {
+    publications {
+        release(MavenPublication) {
+            groupId = PUBLISH_GROUP_ID
+            artifactId = PUBLISH_ARTIFACT_ID
+            version = PUBLISH_VERSION
+
+            afterEvaluate {
+                from components.release
+            }
+        }
+    }
 }
