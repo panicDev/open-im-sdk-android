@@ -218,18 +218,19 @@ class MessageManager {
         Open_im_sdk.deleteAllMsgFromLocalAndSvr(BaseImpl.stringBase(base), ParamsUtil.buildOperationID())
     }
 
-    fun deleteMessageList(base: OnBase<String>, conversationID: String, clientMsgIDList: List<String>) {
-        Open_im_sdk.deleteMessageList(
-            BaseImpl.stringBase(base),
-            ParamsUtil.buildOperationID(),
-            conversationID,
-            JsonUtil.toString(clientMsgIDList)
-        )
-    }
-
-    fun setGlobalRecvMessageOpt(base: OnBase<String>, opt: Int) {
-        Open_im_sdk.setGlobalRecvMessageOpt(BaseImpl.stringBase(base), ParamsUtil.buildOperationID(), opt)
-    }
+    //TODO: fix this
+//    fun deleteMessageList(base: OnBase<String>, conversationID: String, clientMsgIDList: List<String>) {
+//        Open_im_sdk.deleteMessageList(
+//            BaseImpl.stringBase(base),
+//            ParamsUtil.buildOperationID(),
+//            conversationID,
+//            JsonUtil.toString(clientMsgIDList)
+//        )
+//    }
+//
+//    fun setGlobalRecvMessageOpt(base: OnBase<String>, opt: Int) {
+//        Open_im_sdk.setGlobalRecvMessageOpt(BaseImpl.stringBase(base), ParamsUtil.buildOperationID(), opt)
+//    }
 
     fun getAdvancedHistoryMessageList(
         callBack: OnBase<AdvancedMessage>,
@@ -241,7 +242,7 @@ class MessageManager {
         map["conversationID"] = conversationID
         startMsg?.clientMsgID?.let { map["startClientMsgID"] = it }
         map["count"] = count
-        Open_im_sdk.getAdvancedHistoryMessageList(object : Base() {
+        Open_im_sdk.getAdvancedHistoryMessageList(object : Base {
             override fun onError(i: Int, s: String) {
                 CommonUtil.returnError(callBack, i, s)
             }
@@ -265,7 +266,7 @@ class MessageManager {
         startMsg?.clientMsgID?.let { map["startClientMsgID"] = it }
         map["count"] = count
         map["viewType"] = viewType.value
-        Open_im_sdk.getAdvancedHistoryMessageListReverse(object : Base() {
+        Open_im_sdk.getAdvancedHistoryMessageListReverse(object : Base {
             override fun onError(i: Int, s: String) {
                 CommonUtil.returnError(callBack, i, s)
             }

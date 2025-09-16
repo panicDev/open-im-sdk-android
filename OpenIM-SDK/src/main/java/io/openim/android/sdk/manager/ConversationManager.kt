@@ -84,7 +84,7 @@ class ConversationManager {
         return Open_im_sdk.getConversationIDBySessionType(
             ParamsUtil.buildOperationID(),
             sourceId,
-            sessionType
+            sessionType.toLong()
         )
     }
 

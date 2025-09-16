@@ -23,11 +23,12 @@ object CommonUtil {
         }
     }
 
+    @Suppress("UNCHECKED_CAST")
     fun <T> returnObject(onBase: OnBase<T>?, clazz: Class<T>, s: String) {
         if (onBase != null) {
             try {
                 val obj = JsonUtil.toObj(s, clazz)
-                runMainThread { onBase.onSuccess(obj) }
+                runMainThread { onBase.onSuccess(obj as T) }
             } catch (e: Exception) {
                 runMainThread { onBase.onError(-1, e.message ?: "") }
             }

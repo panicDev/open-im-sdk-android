@@ -90,7 +90,7 @@ class OpenIMClient private constructor() {
     }
 
     private fun setAppBackgroundStatus(isBackground: Boolean) {
-        Open_im_sdk.setAppBackgroundStatus(object : Base() {
+        Open_im_sdk.setAppBackgroundStatus(object : Base {
             override fun onError(i: Int, s: String) {
             }
 
@@ -100,7 +100,7 @@ class OpenIMClient private constructor() {
     }
 
     fun login(base: OnBase<String>, uid: String, token: String) {
-        Open_im_sdk.login(object : Base() {
+        Open_im_sdk.login(object : Base {
             override fun onError(i: Int, s: String) {
                 CommonUtil.returnError(base, i, s)
             }
@@ -137,7 +137,8 @@ class OpenIMClient private constructor() {
     }
 
     fun uploadLogs(base: OnBase<String>, params: List<String>, line: Int, ex: String, progress: UploadLogProgress) {
-        Open_im_sdk.uploadLogs(BaseImpl.stringBase(base), ParamsUtil.buildOperationID(), line, ex, progress)
+        Open_im_sdk.uploadLogs(BaseImpl.stringBase(base), ParamsUtil.buildOperationID(),
+            line.toLong(), ex, progress)
     }
 
     fun logs(base: OnBase<String>, logLevel: Long, file: String, line: Long, msg: String, err: String, keyAndValues: Array<String>) {
@@ -149,7 +150,7 @@ class OpenIMClient private constructor() {
     }
 
     fun networkChanged() {
-        Open_im_sdk.networkStatusChanged(object : Base() {
+        Open_im_sdk.networkStatusChanged(object : Base {
             override fun onError(i: Int, s: String) {
             }
 
